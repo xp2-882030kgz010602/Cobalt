@@ -87,30 +87,32 @@ var evolve1=function(cellslist,transitionsobject){
       var neighborcount=1*neighborhood[1];
       neighborcount=8-neighborcount;
       var complementary=type+neighborcount;
-      if(neighborhood.length===3&&neighborcount!==4){
-        complementary+=neighborhood[2];
-      }else if(neighborhood[2]==="c"){
-        complementary+="e";
-      }else if(neighborhood[2]==="e"){
-        complementary+="c";
-      }else if(neighborhood[2]==="i"){
-        complementary+="t";
-      }else if(neighborhood[2]==="t"){
-        complementary+="i";
-      }else if(neighborhood[2]==="j"){
-        complementary+="y";
-      }else if(neighborhood[2]==="y"){
-        complementary+="j";
-      }else if(neighborhood[2]==="n"){
-        complementary+="r";
-      }else if(neighborhood[2]==="r"){
-        complementary+="n";
-      }else if(neighborhood[2]==="q"){
-        complementary+="w";
-      }else if(neighborhood[2]==="w"){
-        complementary+="q";
-      }else{
-        complementary+=neighborhood[2];
+      if(neighborhood.length===3){
+        if(neighborcount!==4){
+          complementary+=neighborhood[2];
+        }else if(neighborhood[2]==="c"){
+          complementary+="e";
+        }else if(neighborhood[2]==="e"){
+          complementary+="c";
+        }else if(neighborhood[2]==="i"){
+         complementary+="t";
+        }else if(neighborhood[2]==="t"){
+          complementary+="i";
+        }else if(neighborhood[2]==="j"){
+          complementary+="y";
+        }else if(neighborhood[2]==="y"){
+          complementary+="j";
+        }else if(neighborhood[2]==="n"){
+          complementary+="r";
+        }else if(neighborhood[2]==="r"){
+          complementary+="n";
+        }else if(neighborhood[2]==="q"){
+          complementary+="w";
+        }else if(neighborhood[2]==="w"){
+          complementary+="q";
+        }else{
+          complementary+=neighborhood[2];
+        }
       }
       neighborhood=complementary;
     }
