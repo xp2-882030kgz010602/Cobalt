@@ -330,9 +330,9 @@ var drawrulepicker=function(){
   textAlign(LEFT,CENTER);
   fill(0,255,0);
   if(h>w){
-    text1("Rule "+(ruleindex+1)+"/"+transitionslist.length,42.5,37.5);
+    text1("Rule "+ruleindex+"/"+transitionslist.length,42.5,37.5);
   }else{
-    text1("Rule "+(ruleindex+1)+"/"+transitionslist.length,82.5,6.5);
+    text1("Rule "+ruleindex+"/"+transitionslist.length,82.5,6.5);
   }
 };
 var drawplaybackgui=function(){
